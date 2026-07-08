@@ -1,0 +1,13 @@
+﻿data/data_full_intermediate.csv
+data/ml_dataset_raw.csv
+data/111.xlsx
+data/222.xlsx
+data/JP_data.xlsx
+data/rc_interest.xlsx
+data/FS_Comins.xlsx
+data/FI_T10.xlsx
+data/*.dta
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.env

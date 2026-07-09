@@ -79,6 +79,18 @@ jupyter notebook notebooks/zombie_prediction.ipynb
 - **Parts 4–7** (modeling, SHAP, error analysis, tuning) run directly from the included `data/ml_dataset_features.csv`.
 
 ---
+## Deep-Dive Variant: China-Only with Richer Features
+
+A second notebook (`notebooks/zombie_prediction_china_deep.ipynb`) explores a China-only model with 26 features, adding revenue-based metrics (net margin, EBIT margin, asset turnover — a DuPont-style decomposition), a net-income-vs-EBIT divergence signal, growth features, and industry flags. These fields are available only for China (Osiris lacks them for Japan), so this variant trades cross-national coverage for feature depth.
+
+**What the added features revealed:**
+
+- **Revenue-based profitability helps.** Net margin and EBIT margin rank 5th and 6th — finer profitability signals from revenue data carry real predictive value.
+- **The core signals are remarkably stable.** The top four features (debt ratio, ROA, short-borrowing dependence, interest gap) are identical to the main model, across a completely different feature set. Zombie firms are fundamentally about leverage, profitability, and subsidized interest.
+- **Two of my prior hypotheses were rejected by the data — informatively.** The receivables-vs-revenue growth gap (meant to catch "fake growth") ranked near the bottom: it targets accounting manipulation, a different problem from zombification. And the industry flags (high-tech, financial) ranked *dead last* (26th and 25th, importance ≈ 0). This is a meaningful finding: whether a firm is a zombie depends on its actual financial dynamics, not its industry label. The model needs no industry tag to handle the "high-tech pseudo-zombie" concern — the financials already encode everything.
+
+The deeper lesson: financial behavior itself carries the signal; identity labels add nothing.
+---
 
 ## Data & Privacy
 

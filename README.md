@@ -35,9 +35,8 @@ PR-AUC of 0.67 is roughly **7× the random baseline** (0.095) — practical accu
 ### Findings that go beyond the metric
 
 1. **Features beat model complexity.** Careful, theory-driven feature engineering lets even logistic regression reach PR-AUC 0.59; the most complex model adds little. In this problem, domain-informed features matter more than model choice.
-2. **Theory validated by ML.** SHAP puts leverage (debt ratio) and profitability (ROA) at the top, with interest-based features — including the dissertation's **interest-gap (CHK)** — in the top six. Economics and ML agree.
-3. **Zombification is cross-national.** Country (`is_china`) ranks near the bottom in SHAP importance: the financial signature of a zombie firm largely transcends borders.
-4. **The model's blind spot is informative.** Missed zombies (false negatives) cluster among firms whose surface financials are improving but that still rely on hidden support — underscoring why "essence" features like the interest gap are needed.
+2. **SHAP reveals three insights beyond the label definition.** It quantifies the relative importance of predictors, showing debt ratio is about 2.5× more influential than ROA despite their equal treatment in the FN-CHK criteria. It also identifies additional predictive signals (e.g., short-borrowing dependence, net margin, and implied rate) while showing that country and industry contribute little, suggesting zombification is driven primarily by firm-level financial dynamics rather than national or sectoral identity.
+3. **The model's blind spot is informative.** Missed zombies (false negatives) cluster among firms whose surface financials are improving but that still rely on hidden support — underscoring why "essence" features like the interest gap are needed.
 
 ---
 

@@ -2,7 +2,7 @@
 
 **A machine-learning pipeline that forecasts corporate zombification from financial statements — China & Japan listed firms, 2016–2024**
 
-This project builds a binary classifier that predicts whether a firm will become a *zombie* in the **following** year, using ~50,000 firm-year observations from Chinese and Japanese listed companies. It grows out of an MPhil dissertation at the University of Cambridge on government support and systemic risk, and reuses the zombie-identification theory from that research (the FN-CHK method) as **predictive features**.
+This project builds a binary classifier that predicts whether a firm will become a *zombie* in the **following** year (i.e. a persistently unprofitable firm kept alive by external support), using ~50,000 firm-year observations from Chinese and Japanese listed companies. It grows out of my MPhil dissertation at the University of Cambridge on government support and systemic risk, and reuses the zombie-identification theory from that research (the FN-CHK method) as **predictive features**.
 
 > 🇯🇵 日本語: [README.ja.md](README.ja.md) ／ 🇨🇳 中文: [README.zh.md](README.zh.md)
 
